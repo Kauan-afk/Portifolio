@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, 'sans-serif';
+    color: #13293D;
+    background: #E8F1F2;
+}
+
+.mainHome {
+    height: 100vh;
+    background: #E8F1F2;
+
+    .navBarHome {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 5rem;
+
+        .navLinks {
+            display: flex;
+
+            height: 100%;
+            
+
+            button {
+                height: 100%;
+                width: 100px;
+
+                border: none;
+
+                cursor: pointer;
+
+                transition: 400ms;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+        }
+    }
+
+
+    .content {
+        display: flex;
+        min-height: 88vh;
+
+        .leftContent {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            
+
+            p {
+                color: #888995;
+            }
+
+            .divLinks {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+                margin-bottom: 100px;
+
+                a {
+                    img {
+                        height: 25px;
+                    }
+                }
+            }
+            .techStack {
+                
+                text-align: center;
+
+                img {
+                    height: 40px;
+                }
+                
+            }
+        }
+
+        .rightContent {
+            flex: 1;
+
+            img {
+                margin-top: 60px;
+                height: 500px;
+            }
+        }
+
+        @media screen and (max-width: 800px) { 
+            .rightContent {
+               display: none;
+            }
+        }
+
+        
+    }
+    .about {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        margin-top: 200px;
+
+        gap: 20px;
+
+        img {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 800px) { 
+            img {
+                display: none;
+            }
+        }
+
+        .aboutText {
+            display: flex;
+            align-items: baseline;
+            flex-direction: column;
+
+            min-height: 200px;
+
+            max-width: 400px;
+
+            h4 {
+                color: #006494;
+            }
+
+            p {
+                color: #888995;
+            }
+        }
+    }
+
+    .projects {
+        margin-top: 200px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 15px;
+
+        .projectsContent {
+            
+            h4 {
+                color: #006494;
+            }
+    
+            p {
+                color: #888995;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .proj1 {
+                margin-top: 50px;
+
+                display: flex;
+
+                @media screen and (max-width: 800px) { 
+                    display: block;
+                }
+
+                border-radius: 10px;
+                padding: 15px;
+                gap: 20px;
+                cursor: pointer;
+                img {
+                    height: 300px;
+                    border-radius: 10px;
+
+                    @media screen and (max-width: 800px) { 
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .proj1Text {
+                    max-width: 400px;
+                }
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-top: 200px;
+        
+        h4 {
+            color: #006494;
+        }
+
+        p {
+            color: #888995;
+        }
+
+        .contactContent {
+            display: flex;
+
+            margin-top: 50px;
+            
+            img {
+                height: 25px;
+            }
+
+            p {
+                margin-right: 25px;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 100px;
+        background: #13293D;
+        color: #E8F1F2;
+    }
+}
