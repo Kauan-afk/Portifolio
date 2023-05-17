@@ -18,6 +18,10 @@
 
         height: 5rem;
 
+        position: sticky;
+
+        top: 0;
+
         .navLinks {
             display: flex;
 
@@ -237,4 +241,18 @@
         background: #13293D;
         color: #E8F1F2;
     }
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #E8F1F2; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #13293D; 
 }

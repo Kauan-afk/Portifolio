@@ -16,15 +16,48 @@ import locationSVG from './images/locationSVG.svg'
 import emailSVG from './images/emailSVG.svg'
 
 function App() {
+
+  function scrollHome () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+  }
+
+
+  function scrollAbout () {
+    window.scrollTo({
+        top: 700,
+        behavior: 'smooth',
+    });
+  }
+
+  function scrollProjects () {
+    window.scrollTo({
+        top: 1300,
+        behavior: 'smooth',
+    });
+  }
+
+
+  function scrollContact () {
+    window.scrollTo({
+        top: 2000,
+        behavior: 'smooth',
+    });
+  }
+
+
+
   return (
   <div className='mainHome'>
     <div className="navBarHome">
       <h2>Kauan Santos</h2>
       <div className='navLinks'>
-        <button>Home</button>
-        <button>About</button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <button onClick={scrollHome}>Home</button>
+        <button onClick={scrollAbout}>About</button>
+        <button onClick={scrollProjects}>Projects</button>
+        <button onClick={scrollContact}>Contact</button>
       </div>
     </div>
 
