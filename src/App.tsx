@@ -1,5 +1,6 @@
 import './styles/Home.scss'
 
+import { useState } from 'react'
 
 import linkedinSVG from './images/linkedin.svg'
 import githubSVG from './images/github.svg'
@@ -14,40 +15,49 @@ import aboutme from './images/aboutmeIMG.jpg'
 import smartLibrary from './images/smartl.png'
 import locationSVG from './images/locationSVG.svg'
 import emailSVG from './images/emailSVG.svg'
+import barsSVG from './images/barsSVG.svg'
 
 function App() {
+  const [sideBar, setSideBar] = useState(false)
 
   function scrollHome () {
     window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
+      top: 0,
+      behavior: 'smooth',
     });
+    setSideBar(false)
   }
 
 
   function scrollAbout () {
     window.scrollTo({
-        top: 700,
-        behavior: 'smooth',
+      top: 700,
+      behavior: 'smooth',
     });
+    setSideBar(false)
   }
 
   function scrollProjects () {
     window.scrollTo({
-        top: 1300,
-        behavior: 'smooth',
+      top: 1300,
+      behavior: 'smooth',
     });
+    setSideBar(false)
   }
 
 
   function scrollContact () {
     window.scrollTo({
-        top: 2000,
-        behavior: 'smooth',
+      top: 2000,
+      behavior: 'smooth',
     });
+    setSideBar(false)
   }
 
 
+  function showsideBar() {
+    setSideBar(!sideBar)
+  }
 
   return (
   <div className='mainHome'>
@@ -58,13 +68,28 @@ function App() {
         <button onClick={scrollAbout}>About</button>
         <button onClick={scrollProjects}>Projects</button>
         <button onClick={scrollContact}>Contact</button>
+
+        <button className='barsButton' onClick={showsideBar}><img src={barsSVG} alt="" /></button>
+
+        <div className={ sideBar? 'sideBarActive' : 'sideBar'}>
+          <ul>
+            <li onClick={scrollHome}>Home</li>
+            <div className='division'></div>
+            <li onClick={scrollAbout}>About</li>
+            <div className='division'></div>
+            <li onClick={scrollProjects}>Projects</li>
+            <div className='division'></div>
+            <li onClick={scrollContact}>Contact</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
     <div className='content'> 
       <div className='leftContent'>
         <h1>Front-End React Developer</h1>
-        <p>Hi, i'm Kauan Santos, bla bla blas</p>
+        <p>Hi, i'm Kauan Santos, a junior front-end developer</p>
         <div className='divLinks'>
           <a href='https://www.linkedin.com/in/kauan-santos-6b516b1a7/'><img src={linkedinSVG} alt="Linkedin" /></a>
           <a href='https://github.com/Kauan-afk'><img src={githubSVG} alt="Github" /></a>
@@ -122,11 +147,14 @@ function App() {
       <h4>Contact</h4>
       <h3>Feel free to get in touch ✌</h3>
       <div className='contactContent'>
-        <img src={locationSVG} alt="" />
-        <p>São Paulo, Brasil</p>
-
-        <img src={emailSVG} alt="" />
-        <p>kauansantosoliveira55@gmail.com</p>
+        <div>
+          <img src={locationSVG} alt="" />
+          <p>São Paulo, Brasil</p>
+        </div>
+        <div>
+          <img src={emailSVG} alt="" />
+          <p>kauansantosoliveira55@gmail.com</p>
+        </div>
       </div>
     </div>
 
